@@ -12,6 +12,7 @@ To import this into a RethinkDB database, install the modules and then run the i
 
 ```
 npm install
+node index.js
 rethinkdb import -f drop/sales.json --table test.sales
 rethinkdb import -f drop/fullfillments.json --table test.fullfillments
 ```
