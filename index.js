@@ -183,11 +183,16 @@ var loadBigDataset = function(){
 
 
   var putToDisk = function(next){
+    var path = "./drop/";
+
     console.log("Writing to disk...");
     console.log("Sales: ", sales.length);
     console.log("Fullfillments: ", fullfillments.length);
-    fs.writeFileSync("./drop/sales.json", JSON.stringify(sales));
-    fs.writeFileSync("./drop/fullfillments.json", JSON.stringify(fullfillments));
+    if (fs.existsSync(path) === false) {
+        fs.mkdirSync(path, 0777);
+    }
+    fs.writeFileSync(path + "sales.json", JSON.stringify(sales));
+    fs.writeFileSync(path + "fullfillments.json", JSON.stringify(fullfillments));
   };
 
   async.series({

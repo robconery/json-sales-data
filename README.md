@@ -8,6 +8,8 @@ I use it for RethinkDB, but feel free to use it however you like.
 
 To run this, open up index.js and change the `SaleCount` variable to be what you want. By default, it's 100,000 records. This will generate 100,000 sales and fullfillment records which you can play with to your heart's content.
 
+The rethinkdb-import command depends on the RethinkDB Python driver, which [must be installed](http://www.rethinkdb.com/docs/install-drivers/python/).
+
 To import this into a RethinkDB database, install the modules and then run the import command (assuming you have RethinkDB installed):
 
 ```
